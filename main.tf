@@ -1,7 +1,13 @@
-provider "aws" {
-  region = var.aws_region
+# https://registry.terraform.io/providers/hashicorp/aws/3.74.2
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "= 3.74.2"
+      region = var.aws_region
+    }
+  }
 }
-
 
 
 # Create AWS ec2 instance
