@@ -1,14 +1,6 @@
-# https://registry.terraform.io/providers/hashicorp/aws/3.74.2
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "= 3.74.2"
+providers "aws" {
       region = var.aws_region
     }
-  }
-}
-
 
 # Create AWS ec2 instance
 resource "aws_instance" "myFirstInstance" {
